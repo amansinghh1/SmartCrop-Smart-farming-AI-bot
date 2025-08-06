@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyze Your Plant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <h1 class="heroine"><strong>Analyze Your Plant</strong></h1>
+    <p class="hero">Upload a clear photo of your plant leaf for instant disease detection</p>
+</div>
+<br>
+<!-- Main Container -->
+<div class="container">
+    <!-- Upload Form -->
+    <form id="uploadForm" action="/analyze" method="POST" enctype="multipart/form-data">
+        <!-- Upload Box -->
+        <label for="fileInput" class="upload-box" id="uploadBox">
+            <div id="uploadText">
+                <img src="{{ url_for('static', filename='upload-icon.png') }}" alt="Upload Icon" class="upload-icon">
+                <h3><strong>Upload Plant Leaf Image</strong></h3>
+                <p>Drag and drop your plant image here, or click to browse</p>
+                <h6 class="bunty">Supports: JPG, PNG, JPEG, WEBP (Max 10MB)</h6>
+                <div type="button" class="green-button">Choose Photo</div>
+            </div>
+            <input type="file" name="file" id="fileInput" accept=".jpg,.jpeg,.png,.webp" required>
+        </label>
+
+        <!-- Image Preview -->
+        <div id="previewContainer" class="preview-box" style="display:none; position: relative;">
+            <button type="button" onclick="resetPreview()" style="position: absolute; top: 10px; right: 10px; background: #ff4b4b; border: none; border-radius: 6px; padding: 5px 7.5px; cursor: pointer; font-size: 18px;">×</button>
+            <img id="previewImage" src="#" alt="Image Preview">
+            <p class="villan">Ready for analysis</p>
+            <div class="action-button">
+                <button type="submit" class="green-button">Analyze Plant Health</button>
+            </div>
+        </div>
+    </form>
+
+    {% if prediction %}
+    <div class="result-card">
+        <!-- Left Column -->
+        <div class="result-left">
+            <div class="disease-box">
+                <h4>Disease Identified</h4>
+                <p>{{ prediction }}</p>
+                {% if confidence %}<small>Confidence: {{ confidence }}%</small>{% endif %}
+            </div>
+
+            <div class="description">
+                <strong>Description</strong>
+                <p>{{ description }}</p>
+            </div>
+
+            {% if harmful %}
+            <div class="harm-box">
+                <span>⚠️ Harmfulness Level</span>
+                <span class="harm-badge">{{ harmful|capitalize }}</span>
+            </div>
+            {% endif %}
+
+            {% if recommendations %}
+            <div class="recommend-box">
+                <h3>Recommendations</h3>
+                <ul>
+                    {% for tip in recommendations %}
+                    <li>{{ tip }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <div class="text-center mt-6">
+                <a href="{{ url_for('analyze') }}" class="green-button">
+                    Analyze Another Image
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="result-right">
+            {% if image_path %}
+            <img src="{{ image_path }}" alt="Uploaded Leaf">
+            <div class="status-badge">Disease Detected</div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+<script>
+    const fileInput = document.getElementById('fileInput');
+    const previewContainer = document.getElementById('previewContainer');
+    const previewImage = document.getElementById('previewImage');
+    const uploadBox = document.getElementById('uploadBox');
+
+    fileInput.addEventListener('change', function () {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            previewContainer.style.display = "block";
+            reader.onload = function (e) {
+                previewImage.setAttribute('src', e.target.result);
+            };
+            reader.readAsDataURL(file);
+            uploadBox.style.display = 'none';
+        }
+    });
+
+    function resetPreview() {
+        previewContainer.style.display = 'none';
+        uploadBox.style.display = 'block';
+        fileInput.value = '';
+    }
+</script>
+
+</body>
+</html>

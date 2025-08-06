@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartCrop</title>
+  <link rel="icon" href="static/uploads/Smartlogo2.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-green-700 text-white px-6 py-4 shadow-md flex justify-between items-center">
+    <h1 class="text-2xl font-bold flex items-center space-x-2">
+  <img src="static/uploads/Smartlogo2.png" alt="SmartCrop Logo" class="w-8 h-8 rounded-full">
+  <span>SmartCrop</span>
+</h1>
+
+    <ul class="hidden md:flex space-x-6 text-lg">
+      <li><a href="#" class="hover:underline">Home</a></li>
+      <li><a href="#features" class="hover:underline">Features</a></li>
+     <li><a href="/about" class="hover:underline">About</a></li>
+      <li><a href="#contact" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+  
+ <!-- Hero Section -->
+<section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('static/uploads/bg3.png');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-green-900 bg-opacity-60"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full h-full flex items-center px-6 md:px-20">
+    
+    <!-- Left: Text Block -->
+    <div class="text-left text-white max-w-xl">
+      <span class="inline-block bg-green-500 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4 shadow">
+        ⚡ Smart Agriculture Technology
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">SmartCrop</h2>
+      <p class="text-lg md:text-xl mb-10">
+        Empowering Farmers with AI to Detect Plant Diseases and Optimize Crop Yields
+      </p>
+      <a href="#features" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg text-lg shadow-md transition">
+        Get Started
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 px-6 bg-white">
+    <h3 class="text-3xl font-bold text-center text-green-700 mb-12">Key Features</h3>
+    <div class="w-full px-6 md:px-0 mt-10">
+  <p class="max-w-3xl mx-auto text-center text-lg text-gray-700 leading-relaxed">
+    SmartCrop empowers farmers with AI-driven tools for efficient farming. It offers plant disease <br>detection from
+    leaf images, personalized crop suggestions based on local conditions, and real-<br>time weather updates — 
+    helping farmers make smarter decisions for healthier crops and improved yields.
+  </p>
+</div>
+<br>
+<br>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
+      
+      <!-- Feature 1 -->
+      <div class="text-center shadow-md p-6 rounded-xl border hover:shadow-lg transition">
+        <a href="/analyze" class="block">
+        <img src="https://cdn-icons-png.flaticon.com/512/2902/2902581.png" alt="Disease Detection" class="w-16 mx-auto mb-4">
+        <h4 class="text-xl font-semibold mb-2 hover:underline">Plant Disease Detection</h4>
+        </a>
+        <p class="text-gray-600 text-sm">Upload a leaf image to detect diseases using our AI model.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="text-center shadow-md p-6 rounded-xl border hover:shadow-lg transition">
+        <a href="/guide" class="block">
+        <img src="https://cdn-icons-png.flaticon.com/512/3488/3488821.png" alt="Crop Recommendation" class="w-16 mx-auto mb-4">
+        <h4 class="text-xl font-semibold mb-2 text-black hover:underline">Crop Recommendation</h4>
+        </a>
+        <p class="text-gray-600 text-sm">Get the best crops to grow based on season, soil, and climate data.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="text-center shadow-md p-6 rounded-xl border hover:shadow-lg transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140038.png" alt="Fertilizer" class="w-16 mx-auto mb-4">
+        <h4 class="text-xl font-semibold mb-2">Fertilizer Advice</h4>
+        <p class="text-gray-600 text-sm">Smart suggestions for fertilizers based on crop and soil health.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="text-center shadow-md p-6 rounded-xl border hover:shadow-lg transition">
+  <a href="/weather" class="block">
+    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920231.png" alt="Weather" class="w-16 mx-auto mb-4">
+    <h4 class="text-xl font-semibold mb-2 text-black hover:underline">Weather Forecast</h4>
+  </a>
+  <p class="text-gray-600 text-sm">Plan your farming with accurate weather predictions in real-time.</p>
+</div>
+
+
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 text-center mt-12">
+    <p> © 2025 <span class="font-semibold">Smart Farming AI</span>. By <span class="font-semibold">Aman Singh</span>.</p>
+  </footer>
+
+</body>
+</html>

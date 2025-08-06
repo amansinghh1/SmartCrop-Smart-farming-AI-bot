@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartCrop | Farming Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #cropInfo.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-green-50 font-sans text-gray-800">
+
+  <!-- Header Section -->
+ <section class="py-10 px-4 md:px-10 max-w-4xl mx-auto">
+  <h1 class="text-2xl font-bold text-green-800 text-center mb-6">Smart Farming Guide</h1>
+
+  <!-- Centered Card with Dropdown -->
+  <div class="bg-green-100 border border-green-300 rounded-xl p-6 shadow-md text-center">
+    <label for="cropSelector" class="block text-lg font-medium text-green-900 mb-2">Select a Crop to Learn More</label>
+    
+    <select id="cropSelector" class="border border-green-500 rounded-md px-4 py-2 mb-4 w-full max-w-sm mx-auto block bg-white text-green-900">
+      <option value="">-- Select a Crop --</option>
+      <option value="apple">Apple</option>
+      <option value="banana">Banana</option>
+      <option value="rice">Rice</option>
+      <option value="wheat">Wheat</option>
+      <option value="maize">Maize</option>
+      <option value="cotton">Cotton</option>
+      <option value="grapes">Grapes</option>
+      <option value="chickpea">Chickpea</option>
+      <option value="mango">Mango</option>
+      <option value="coffee">Coffee</option>
+      <option value="pomegranate">Pomegranate</option>
+      <option value="blackgram">Blackgram</option>
+      <option value="mungbean">Mungbean</option>
+      <option value="papaya">Papaya</option>
+      <option value="orange">Orange</option>
+      <option value="muskmelon">Muskmelon</option>
+      <option value="pigeonpeas">Pigeonpeas</option>
+      <option value="lentil">Lentil</option>
+      <option value="kidneybeans">Kidneybeans</option>
+      <option value="coconut">Coconut</option>
+    </select>
+
+    <!-- Hidden Crop Info Display -->
+    <div id="cropInfo" class="bg-white mt-6 p-6 rounded-lg shadow-md border text-left hidden"></div>
+  </div>
+</section>
+
+
+  <!-- Data Table Section -->
+  <section id="table" class="py-10 px-4 md:px-10 w-full max-w-screen-xl mx-auto">
+    <h3 class="text-xl font-semibold mb-6">Average Conditions for Crops</h3>
+    <div class="overflow-x-auto rounded-lg shadow-md border border-green-200">
+      <table class="min-w-full text-sm text-center table-auto">
+        <thead class="bg-green-700 text-white">
+          <tr>
+            <th class="px-4 py-2">Crop</th>
+            <th>Nitrogen</th>
+            <th>Phosphorus</th>
+            <th>Potassium</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>pH</th>
+            <th>Rainfall (mm)</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-green-100">
+          <!-- All crops, with corrected Chickpea and Banana values -->
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Apple</td><td>20.80</td><td>134.22</td><td>199.89</td><td>22.63</td><td>92.33</td><td>5.93</td><td>112.65</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Banana</td><td><strong>200.0</strong></td><td><strong>50.0</strong></td><td><strong>1400.0</strong></td><td>27.38</td><td>80.36</td><td>5.98</td><td>104.63</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Blackgram</td><td>40.02</td><td>67.47</td><td>19.24</td><td>29.97</td><td>65.12</td><td>7.13</td><td>67.88</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Chickpea</td><td><strong>25.0</strong></td><td><strong>50.0</strong></td><td><strong>25.0</strong></td><td>18.87</td><td>16.86</td><td>7.34</td><td>80.06</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Coconut</td><td>21.98</td><td>16.93</td><td>30.59</td><td>27.41</td><td>94.84</td><td>5.98</td><td>175.69</td>
+        </tr>
+        <tr class="hover:bg_green-50">
+          <td>Coffee</td><td>101.20</td><td>28.74</td><td>29.94</td><td>25.54</td><td>58.87</td><td>6.81</td><td>158.07</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Cotton</td><td>117.77</td><td>46.24</td><td>19.56</td><td>23.99</td><td>79.84</td><td>6.92</td><td>80.09</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Grapes</td><td>23.18</td><td>132.53</td><td>200.11</td><td>23.87</td><td>81.87</td><td>6.25</td><td>69.91</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Jute</td><td>78.40</td><td>46.86</td><td>39.99</td><td>24.96</td><td>79.64</td><td>6.73</td><td>174.79</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Lentil</td><td>18.77</td><td>68.36</td><td>19.41</td><td>24.51</td><td>64.80</td><td>6.99</td><td>45.68</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Maize</td><td>77.76</td><td>48.44</td><td>19.79</td><td>22.61</td><td>65.92</td><td>6.26</td><td>84.76</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Mango</td><td>20.07</td><td>27.18</td><td>29.92</td><td>31.90</td><td>50.05</td><td>5.77</td><td>94.99</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Mothbeans</td><td>21.44</td><td>48.01</td><td>20.23</td><td>28.52</td><td>53.16</td><td>6.85</td><td>51.22</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Mungbean</td><td>20.99</td><td>47.28</td><td>19.87</td><td>28.27</td><td>85.95</td><td>6.74</td><td>48.44</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Muskmelon</td><td>100.32</td><td>17.72</td><td>50.08</td><td>28.66</td><td>92.34</td><td>6.36</td><td>24.69</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Orange</td><td>19.58</td><td>16.55</td><td>10.01</td><td>22.77</td><td>92.50</td><td>7.01</td><td>110.41</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Papaya</td><td>49.88</td><td>59.05</td><td>50.04</td><td>33.72</td><td>92.40</td><td>6.74</td><td>142.63</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Pigeonpeas</td><td>20.73</td><td>67.73</td><td>20.29</td><td>27.74</td><td>48.06</td><td>5.79</td><td>149.46</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Pomegranate</td><td>18.87</td><td>18.75</td><td>40.21</td><td>21.84</td><td>90.13</td><td>6.43</td><td>107.53</td>
+        </tr>
+        <tr class="hover:bg-green-50">
+          <td>Rice</td><td>79.89</td><td>47.58</td><td>39.87</td><td>23.59</td><td>82.27</td><td>6.43</td><td>236.18</td>
+        </tr>
+        <tr class="bg-green-100 hover:bg-green-200">
+          <td>Watermelon</td><td>99.42</td><td>17.00</td><td>50.22</td><td>25.59</td><td>85.16</td><td>6.50</td><td>50.79</td>
+        </tr>
+        <tr class="hover:bg-green-50"></tr>
+          <td>Kidneybeans</td><td>20.75</td><td>67.54</td><td>20.05</td><td>20.05</td><td>21.61</td><td>5.78</td><td>105.92</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Script for Crop Display Control -->
+  <script src="{{ url_for('static', filename='cropGuide.js') }}"></script>
+  <script>
+    // Toggle cropInfo display only if data exists
+    document.getElementById("cropSelector").addEventListener("change", function () {
+      const selected = this.value;
+      const info = document.getElementById("cropInfo");
+      if (selected === "") {
+        info.classList.add("hidden");
+        info.innerHTML = "";
+      } else {
+        info.classList.remove("hidden");
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 text-center mt-12">
+    <p> © 2025 <span class="font-semibold">Smart Farming AI</span>. By <span class="font-semibold">Aman Singh</span>.</p>
+  </footer>
+</body>
+</html>

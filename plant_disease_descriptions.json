@@ -1,0 +1,195 @@
+{
+    "healthy": {
+        "diseaseDetected": false,
+        "diseaseName": "Healthy",
+        "description": "This leaf appears to be healthy with no visible signs of disease. The leaf shows good color, structure, and vitality.",
+        "harmfulness": "none",
+        "recommendations": [
+            "Continue current care routine",
+            "Monitor regularly for any changes",
+            "Ensure proper watering and lighting",
+            "Maintain good air circulation"
+        ]
+    },
+    "apple_scab": {
+        "diseaseDetected": true,
+        "diseaseName": "Apple Scab",
+        "description": "A fungal disease causing dark, velvety spots on leaves and fruit. Commonly affects apple trees and reduces yield.",
+        "harmfulness": "high",
+        "recommendations": [
+            "Remove infected leaves and fallen debris",
+            "Prune for better air circulation",
+            "Use appropriate fungicides during early season",
+            "Avoid overhead watering"
+        ]
+    },
+    "bacterial_spot": {
+        "diseaseDetected": true,
+        "diseaseName": "Bacterial Spot",
+        "description": "Bacterial infection that causes water-soaked spots on leaves. Can lead to leaf drop and fruit blemishes.",
+        "harmfulness": "medium",
+        "recommendations": [
+            "Remove affected leaves immediately",
+            "Improve air circulation around the plant",
+            "Avoid overhead watering",
+            "Apply copper-based bactericide if severe",
+            "Quarantine plant if necessary"
+        ]
+    },
+    "black_rot": {
+        "diseaseDetected": true,
+        "diseaseName": "Black Rot",
+        "description": "Fungal disease in grapes causing blackened spots on leaves and rotting fruit. Spreads in humid conditions.",
+        "harmfulness": "high",
+        "recommendations": [
+            "Prune infected plant parts",
+            "Dispose fallen leaves and rotting fruit",
+            "Ensure proper drainage and air movement",
+            "Apply sulfur-based fungicides during growing season"
+        ]
+    },
+    "cedar_apple_rust": {
+        "diseaseDetected": true,
+        "diseaseName": "Cedar Apple Rust",
+        "description": "Fungal disease with orange lesions on leaves. Alternates between apple and cedar trees during its life cycle.",
+        "harmfulness": "medium",
+        "recommendations": [
+            "Remove galls from cedar trees nearby",
+            "Use resistant apple varieties",
+            "Apply preventive fungicide early in the season",
+            "Avoid planting susceptible varieties close together"
+        ]
+    },
+    "cercospora_leaf_spot": {
+        "diseaseDetected": true,
+        "diseaseName": "Cercospora Leaf Spot",
+        "description": "Fungal infection in crops like corn and soybeans. Reduces photosynthesis by forming gray/brown leaf spots.",
+        "harmfulness": "medium",
+        "recommendations": [
+            "Remove infected foliage",
+            "Increase crop rotation and sanitation",
+            "Apply chlorothalonil or mancozeb fungicides",
+            "Use resistant cultivars"
+        ]
+    },
+    "common_rust": {
+        "diseaseDetected": true,
+        "diseaseName": "Common Rust",
+        "description": "Rust-colored pustules appear on leaves, mainly affecting corn. Disease progresses in warm, humid weather.",
+        "harmfulness": "low",
+        "recommendations": [
+            "Improve crop spacing for airflow",
+            "Use resistant hybrids",
+            "Apply foliar fungicides if infestation is heavy",
+            "Rotate crops annually"
+        ]
+    },
+    "early_blight": {
+        "diseaseDetected": true,
+        "diseaseName": "Early Blight",
+        "description": "Dark brown leaf spots with concentric rings affecting potatoes and tomatoes. Weakens plants over time.",
+        "harmfulness": "high",
+        "recommendations": [
+            "Remove and destroy infected plant material",
+            "Apply copper fungicides early",
+            "Mulch to prevent soil splash",
+            "Practice crop rotation"
+        ]
+    },
+    "esca": {
+        "diseaseDetected": true,
+        "diseaseName": "Esca (Black Measles)",
+        "description": "Fungal disease in grapevines, causing leaf striping and poor fruit quality. May result in sudden vine death.",
+        "harmfulness": "high",
+        "recommendations": [
+            "Avoid pruning in wet weather",
+            "Remove affected wood and canes",
+            "Improve soil drainage",
+            "Avoid over-fertilizing"
+        ]
+    },
+    "late_blight": {
+        "diseaseDetected": true,
+        "diseaseName": "Late Blight",
+        "description": "Highly destructive disease in potatoes and tomatoes. Causes water-soaked lesions and plant collapse.",
+        "harmfulness": "very high",
+        "recommendations": [
+            "Remove infected plants immediately",
+            "Apply systemic fungicides promptly",
+            "Avoid excess moisture on foliage",
+            "Use certified disease-free seeds"
+        ]
+    },
+    "leaf_blight": {
+        "diseaseDetected": true,
+        "diseaseName": "Leaf Blight",
+        "description": "General fungal condition that causes widespread browning and tissue death on leaves.",
+        "harmfulness": "medium",
+        "recommendations": [
+            "Trim back infected foliage",
+            "Improve ventilation around plant",
+            "Apply protective fungicide sprays",
+            "Keep leaves dry during watering"
+        ]
+    },
+    "leaf_scorch": {
+        "diseaseDetected": true,
+        "diseaseName": "Leaf Scorch",
+        "description": "Non-infectious browning of leaf tips due to heat, drought or root damage. Common in summer.",
+        "harmfulness": "low",
+        "recommendations": [
+            "Water deeply but less frequently",
+            "Avoid over-fertilization",
+            "Provide partial shade",
+            "Improve soil moisture retention"
+        ]
+    },
+    "northern_leaf_blight": {
+        "diseaseDetected": true,
+        "diseaseName": "Northern Leaf Blight",
+        "description": "Gray-green lesions on leaves of corn. Can cause significant yield loss if left untreated.",
+        "harmfulness": "high",
+        "recommendations": [
+            "Use resistant corn varieties",
+            "Apply fungicides at early stage",
+            "Practice crop rotation",
+            "Ensure proper field sanitation"
+        ]
+    },
+    "powdery_mildew": {
+        "diseaseDetected": true,
+        "diseaseName": "Powdery Mildew",
+        "description": "White powdery fungal growth on leaves, affecting many crops including grapes and cucurbits.",
+        "harmfulness": "medium",
+        "recommendations": [
+            "Apply sulfur or neem oil sprays",
+            "Improve sunlight exposure",
+            "Avoid overcrowding plants",
+            "Trim infected areas"
+        ]
+    },
+    "septoria_leaf_spot": {
+        "diseaseDetected": true,
+        "diseaseName": "Septoria Leaf Spot",
+        "description": "Fungal tomato disease with small, dark, circular lesions on leaves. Starts at lower leaves and spreads.",
+        "harmfulness": "medium",
+        "recommendations": [
+            "Prune infected leaves quickly",
+            "Avoid wetting leaves while watering",
+            "Apply fungicides regularly",
+            "Rotate with non-host crops yearly"
+        ]
+    },
+    "yellow_leaf_curl_virus": {
+        "diseaseDetected": true,
+        "diseaseName": "Yellow Leaf Curl Virus",
+        "description": "Viral infection in tomatoes and peppers spread by whiteflies. Causes curling, yellowing, and stunted growth.",
+        "harmfulness": "very high",
+        "recommendations": [
+            "Control whitefly population",
+            "Use virus-resistant seeds",
+            "Remove infected plants early",
+            "Cover plants with insect netting"
+        ]
+    }
+}

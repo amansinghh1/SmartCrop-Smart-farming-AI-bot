@@ -1,0 +1,261 @@
+/* Background and font */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7ffee;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Heading section */
+.header-text h1 {
+    font-size: 2.5rem;
+    color: #111;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.heroine {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hero {
+    font-size: 20px;
+    color: #44aa44;
+}
+
+.villan {
+    font-size: 20px;
+}
+
+.bunty {
+    font-weight: 400;
+    color: #888;
+}
+
+.header-text p {
+    color: #222;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Container */
+.container {
+    background: white;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+.preview-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.upload-box input[type="file"] {
+    display: none;
+}
+
+.upload-box p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Buttons */
+.green-button {
+    background-color: #44aa44;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    text-align: center;
+    min-width: 120px;
+    margin: 12px auto 0 auto;
+    display: block;
+}
+
+.green-button:hover {
+    background-color: #369936;
+}
+
+/* Image preview box */
+.preview-box {
+    border: 2px dashed #44aa44;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.preview-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.preview-box p {
+    font-weight: 500;
+    color: #333;
+}
+
+.action-button {
+    margin-top: 20px;
+}
+
+.upload-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.upload-icon:hover {
+    transform: scale(1.1);
+    background-color: #f4fdf4;
+}
+
+/* Result Section */
+.result-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+/* Left Content (Text) */
+.result-left {
+    flex: 1;
+    min-width: 260px;
+}
+
+.disease-box {
+    background-color: #ffeaea;
+    border: 1px solid #f6caca;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.disease-box h4 {
+    color: #d32f2f;
+    margin: 0 0 5px;
+    font-size: 1rem;
+}
+
+.disease-box p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.result-left .description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.harm-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff9e6;
+    border: 1px solid #ffdd99;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.harm-box span {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.harm-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #ffd740;
+    color: #000;
+}
+
+.recommend-box {
+    background-color: #f0fff2;
+    border: 1px solid #b8e7bf;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.recommend-box h3 {
+    font-size: 1.1rem;
+    color: #1b7a3f;
+    margin-bottom: 12px;
+}
+
+.recommend-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.recommend-box li {
+    padding: 10px 15px;
+    background-color: #e8f9ea;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 28px;
+}
+
+.recommend-box li::before {
+    content: "●";
+    color: #4caf50;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.result-right {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.result-right img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.status-badge {
+    background-color: #d32f2f;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 12px;
+}

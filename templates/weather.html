@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartCrop | Weather Forecast</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="relative min-h-screen bg-gradient-to-br from-green-50 to-green-100 font-sans">
+
+  <!-- Back Button -->
+  <a href="{{ url_for('index') }}" class="absolute top-20 left-4 z-50 bg-white text-green-700 border border-green-600 px-4 py-2 rounded-full shadow hover:bg-green-100 transition duration-200">
+    ← Back Home
+  </a>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-green-700 text-white px-6 py-4 shadow-md z-40 text-center">
+    <h1 class="text-2xl font-bold">🌤️ SmartCrop Weather Forecast</h1>
+  </header>
+
+  <!-- Search + Weather -->
+  <main class="pt-32 px-4 flex flex-col items-center">
+    <!-- Search Box -->
+    <div class="w-full max-w-xl bg-white p-6 rounded-xl shadow-md text-center">
+      <h2 class="text-2xl font-semibold text-green-700 mb-4">Check Current Weather</h2>
+      <div class="flex gap-2 mb-4">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name"
+          class="w-full border border-green-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+        <button onclick="getWeather()" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition shadow-md">
+          Get Weather
+        </button>
+      </div>
+
+      <!-- Weather Info -->
+      <div id="weatherResult" class="hidden mt-6">
+        <h3 class="text-xl font-bold text-gray-800 mb-2" id="location"></h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white">
+          
+          <!-- Temp -->
+          <div class="bg-green-500 rounded-lg p-4 shadow">
+            <p class="text-3xl font-bold" id="temperature">--°C</p>
+            <p id="condition" class="text-sm opacity-90">Condition</p>
+            <p class="text-xs mt-2">Temperature</p>
+          </div>
+
+          <!-- Humidity -->
+          <div class="bg-yellow-400 rounded-lg p-4 shadow">
+            <p class="text-3xl font-bold" id="humidity">--%</p>
+            <p class="text-sm opacity-90">Humidity</p>
+            <p class="text-xs mt-2">Relative Humidity</p>
+          </div>
+
+          <!-- Wind -->
+          <div class="bg-blue-400 rounded-lg p-4 shadow">
+            <p class="text-3xl font-bold" id="windSpeed">-- km/h</p>
+            <p class="text-sm opacity-90">Wind Speed</p>
+            <p class="text-xs mt-2">Wind Flow</p>
+          </div>
+
+        </div>
+
+        <!-- Icon -->
+        <img id="weatherIcon" class="mx-auto mt-4 w-20 h-20" />
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Tailwind CDN already in head -->
+  <script>
+    async function getWeather() {
+      const city = document.getElementById('cityInput').value.trim();
+      if (!city) return alert("Please enter a city name.");
+
+      const apiKey = "98c127ae4c7792927a6b7f30616ffeea"; // From https://home.openweathermap.org/myservices
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.cod !== 200) throw new Error(data.message);
+
+        document.getElementById("location").innerText = `${data.name}, ${data.sys.country}`;
+        document.getElementById("temperature").innerText = `${data.main.temp.toFixed(1)}°C`;
+        document.getElementById("condition").innerText = data.weather[0].description;
+        document.getElementById("humidity").innerText = `${data.main.humidity}%`;
+        document.getElementById("windSpeed").innerText = `${data.wind.speed} km/h`;
+        document.getElementById("weatherIcon").src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+        document.getElementById("weatherResult").classList.remove("hidden");
+      } catch (err) {
+        alert("Could not fetch weather data. " + err.message);
+      }
+    }
+  </script>
+ 
+</body>
+
+</html>
